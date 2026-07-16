@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Employee Login";
+}
+<div class="row justify-content-center">
+
+    <div class="col-md-5">
+
+        <div class="card shadow">
+
+            <div class="card-body">
+
+<h2 class="text-center mb-4">
+    Employee Login
+</h2>
+
+<form method="post">
+
+    <label>Email</label><br />
+    <input type="email" name="email" />
+    <br /><br />
+
+    <label>Password</label><br />
+    <input type="password" name="password" />
+    <br /><br />
+
+    <button type="submit" class="btn btn-primary">Login</button>
+                    <hr />
+
+                    <p class="text-center">
+                        New Employee?
+                        <a asp-controller="Employee"
+                           asp-action="Register">
+                            Register Here
+                        </a>
+                    </p>
+                    <hr />
+
+                    <p class="text-center">
+                        Administrator?
+
+                        <a asp-controller="Admin"
+                           asp-action="Login">
+                            Login Here
+                        </a>
+                    </p>
+
+</form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

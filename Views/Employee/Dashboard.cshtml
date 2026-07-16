@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <h2 class="mb-4">
+            👋 Welcome, @ViewBag.EmployeeName
+        </h2>
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card text-bg-primary shadow">
+            <div class="card-body text-center">
+                <h5>Available Leaves</h5>
+                <h1>@ViewBag.AvailableLeaves</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-bg-warning shadow">
+            <div class="card-body text-center">
+                <h5>Pending</h5>
+                <h1>@ViewBag.Pending</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-bg-success shadow">
+            <div class="card-body text-center">
+                <h5>Approved</h5>
+                <h1>@ViewBag.Approved</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-bg-danger shadow">
+            <div class="card-body text-center">
+                <h5>Rejected</h5>
+                <h1>@ViewBag.Rejected</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="mt-5">
+
+    <h3>Quick Actions</h3>
+
+    <a href="/Employee/ApplyLeave" class="btn btn-primary me-2">
+        Apply Leave
+    </a>
+
+    <a href="/Employee/MyLeaves" class="btn btn-success">
+        View My Leaves
+    </a>
+
+</div>

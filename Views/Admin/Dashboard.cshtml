@@ -1,0 +1,61 @@
+﻿@model List<EmployeeLeaveManagement.Models.LeaveRequest>
+
+<h2>Admin Dashboard</h2>
+
+<table class="table table-striped table-hover">
+    <thead>
+
+        <tr>
+
+            <th>Employee</th>
+
+            <th>Leave Type</th>
+
+            <th>Start</th>
+
+            <th>End</th>
+
+            <th>Status</th>
+
+            <th>Action</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var leave in Model)
+        {
+            <tr>
+
+                <td>@leave.EmployeeEmail</td>
+
+                <td>@leave.LeaveType</td>
+
+                <td>@leave.StartDate.ToShortDateString()</td>
+
+                <td>@leave.EndDate.ToShortDateString()</td>
+
+                <td>@leave.Status</td>
+
+                <td>
+
+                    <a class="btn btn-success"
+                       href="/Admin/Approve/@leave.Id">
+                        Approve
+                    </a>
+
+                    <a class="btn btn-danger"
+                       href="/Admin/Reject/@leave.Id">
+                        Reject
+                    </a>
+
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
